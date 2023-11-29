@@ -71,8 +71,8 @@ app.get('/escolas', (req, res) => {
   });
 });
 
-// Substitua localhost pelo IP da sua máquina
-const ipAddress = '172.16.31.43'; // Substitua pelo seu IP
+// Alteração no IP para '0.0.0.0'
+const ipAddress = '0.0.0.0';
 app.listen(port, ipAddress, () => {
   console.log(`Servidor rodando em http://${ipAddress}:${port}`);
 });
