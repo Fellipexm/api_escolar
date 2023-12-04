@@ -113,7 +113,7 @@ app.get('/dados/media-padronizada', (req, res) => {
       console.error('Erro ao executar a consulta para Nota Média Padronizada:', err);
       res.status(500).json({ error: 'Erro ao buscar a Nota Média Padronizada.', details: err.message });
     } else {
-      console.log('Resultado da consulta para Nota Média Padronizada:', results);
+      console.log('Resultado da consulta para Nota Média Padronizada', results);
       res.json(results);
     }
   });
