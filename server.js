@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(cors({
-  origin: '*', // Permitir acesso de qualquer origem
+  origin: '*', 
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
 }));
@@ -106,7 +106,7 @@ app.get('/dados/comparacao', (req, res) => {
   });
 });
 
-// Rota modificada para incluir id_escola, nome_escola e nota_saeb_media_padronizada
+
 app.get('/dados/media-padronizada', (req, res) => {
   connection.query('SELECT id_escola, nome_escola, nota_saeb_media_padronizada FROM new', (err, results) => {
     if (err) {
